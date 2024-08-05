@@ -15,10 +15,10 @@ import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 
 const appStoreImg = '~/assets/images/app-store.png';
-const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
+const appStoreDownloadLink = 'https://apps.apple.com/sg/app/baby-joy/id6475108933';
 
 const googlePlayImg = '~/assets/images/google-play.png';
-const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
+const googlePlayDownloadLink = 'https://apps.apple.com/sg/app/baby-joy/id6475108933';
 
 const metadata = {
   title: 'Mobile App Homepage',
@@ -32,8 +32,9 @@ const metadata = {
       position="left"
       links={[
         { text: 'Services', href: '#' },
-        { text: 'Features', href: '#' },
+        { text: 'Features', href: '#features' },
         { text: 'About', href: '#' },
+        { text: 'Contact', href: '/contact' },
       ]}
       actions={[
         {
@@ -56,7 +57,7 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight">AstroWind App</span>: <br /> professional websites <span
+      <span class="text-accent dark:text-white highlight">Baby Joy App</span>: <br /> professional websites <span
         class="hidden xl:inline">made easy</span
       >
     </Fragment>
