@@ -123,45 +123,24 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Features', href: '#features' },
+        { text: 'FAQS', href: '#FAQs'},
       ],
     },
     {
-      title: 'Platform',
+      title: 'Download',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'iOS', href: 'https://apps.apple.com/sg/app/baby-joy/id6475108933' },
+        { text: 'Android', href: '#' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'About Us', href: '#' },
+        { text: 'Privacy Policy', href: 'https://www.termsfeed.com/live/8e28428a-fedb-4dbf-88c7-e9106f308252'},
+        { text: 'Disclaimer', href: '/disclaimer' },
+        { text: 'Contact', href: '/contact' },
       ],
     },
   ],
@@ -178,6 +157,6 @@ export const footerData = {
   ],
   footNote: `
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href=""> The Everest Lab - Tan Nguyen</a> · All rights reserved.
+    Made by <a class="text-blue-600 underline dark:text-muted" href=""> The Everest Lab</a> · All rights reserved.
   `,
 };
