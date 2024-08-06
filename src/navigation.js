@@ -137,7 +137,7 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About Us', href: '#' },
+        { text: 'About Us', href: '/about' },
         { text: 'Privacy Policy', href: 'https://www.termsfeed.com/live/8e28428a-fedb-4dbf-88c7-e9106f308252'},
         { text: 'Disclaimer', href: '/disclaimer' },
         { text: 'Contact', href: '/contact' },
@@ -145,18 +145,19 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
+    { text: 'Terms', href: getPermalink('/privacy') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/share/22Bv1DRmtZLFmRuK/?mibextid=LQQJ4d' },
+    { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@BabyJoyChannel' },
+    { ariaLabel: 'Tiktok', icon: 'tabler:brand-tiktok', href: '#' },
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
+    <img class="w-50 h-50 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://theeverestlab.github.io/Resources/Images/everest-lab-logo.png" alt="onWidget logo" loading="lazy"></img>
     Made by <a class="text-blue-600 underline dark:text-muted" href=""> The Everest Lab</a> · All rights reserved.
   `,
 };
