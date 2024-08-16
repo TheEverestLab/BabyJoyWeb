@@ -1,6 +1,6 @@
 site:
   name: BabyJoy
-  site: 'https://astrowind.vercel.app'
+  site: 'https://theeverestlab.com'
   base: '/'
   trailingSlash: false
 
@@ -66,7 +66,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: 'G-296C7LVQ41' # or "G-XXXXXXXXXX"
+      id: "G-296C7LVQ41" # or "G-XXXXXXXXXX"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

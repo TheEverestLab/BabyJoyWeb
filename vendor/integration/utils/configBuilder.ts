@@ -182,7 +182,7 @@ const getAnalytics = (config: Config) => {
   const _default = {
     vendors: {
       googleAnalytics: {
-        id: 'G-296C7LVQ41',
+        id: "G-296C7LVQ41",
         partytown: true,
       },
     },
