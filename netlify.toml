@@ -7,3 +7,22 @@
   for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Subdomain redirects for founder page
+[[redirects]]
+  from = "https://founder.theeverestlab.com/*"
+  to = "https://theeverestlab.com/founder"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://nguyenthanhtan.theeverestlab.com/*"
+  to = "https://theeverestlab.com/founder"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://tan.theeverestlab.com/*"
+  to = "https://theeverestlab.com/founder"
+  status = 301
+  force = true

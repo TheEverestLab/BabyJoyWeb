@@ -43,6 +43,10 @@ export const headerData = {
           href: getPermalink('/about'),
         },
         {
+          text: 'Founder',
+          href: getPermalink('/founder'),
+        },
+        {
           text: 'Contact',
           href: getPermalink('/contact'),
         },
@@ -138,6 +142,7 @@ export const footerData = {
       title: 'Company',
       links: [
         { text: 'About Us', href: '/about' },
+        { text: 'Founder', href: '/founder' },
         { text: 'Privacy Policy', href: 'https://www.termsfeed.com/live/8e28428a-fedb-4dbf-88c7-e9106f308252'},
         { text: 'Disclaimer', href: '/disclaimer' },
         { text: 'Contact', href: '/contact' },

@@ -1,0 +1,196 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Nguyen Thanh Tan - Founder | The Everest Lab',
+  description: 'Founder of The Everest Lab — where ideas grow into products that blend engineering excellence with human-centered design.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero
+    tagline="Founder Profile"
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Technology workspace',
+    }}
+  >
+    <Fragment slot="title">
+      Nguyen Thanh Tan
+      <br />
+      <span class="text-accent dark:text-white highlight">Founder of The Everest Lab</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      A place where ideas grow into products that blend engineering excellence with human-centered design
+    </Fragment>
+  </Hero>
+
+  <!-- About Me Section -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'About Me',
+        description:
+          'I am Nguyen Thanh Tan, founder of The Everest Lab — a place where ideas grow into products that blend engineering excellence with human-centered design.',
+      },
+      {
+        title: 'Experience & Passion',
+        description:
+          'With over a decade of professional software development experience, I bring expertise in performance, memory management, and user experience.',
+      },
+      {
+        title: 'Beyond Technology',
+        description:
+          'Beyond technology, I am a content creator who enjoys making creative videos for my child, reflecting my love for storytelling, family, and creativity.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
+      alt: 'Tech Innovation',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Who I Am</h3>
+      <p>Building products that make a difference</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Professional Background -->
+  <Features2
+    title="Professional Background"
+    subtitle="A journey through technology and leadership"
+    items={[
+      {
+        title: 'Leadership & Management',
+        description:
+          'Throughout my career, I\'ve managed resources, led teams, and contributed as a lead developer to bring high-quality products to life.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Dual Perspective',
+        description:
+          'This dual perspective — both as a manager and as a builder — is part of what shapes The Everest Lab\'s approach: balancing vision with execution.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Software Excellence',
+        description:
+          'Over a decade of professional software development experience with expertise in performance optimization and memory management.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'User Experience Focus',
+        description:
+          'Deep understanding of user needs and commitment to creating intuitive, delightful experiences that solve real problems.',
+        icon: 'tabler:heart',
+      },
+    ]}
+  />
+
+  <!-- The Everest Lab Section -->
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'The Everest Lab',
+        description:
+          'The Everest Lab is my company. It serves as a parent brand for multiple software products and services.',
+      },
+      {
+        title: 'Baby Joy - Our First Product',
+        description:
+          'The first flagship product is Baby Joy, a baby-tracking and parenting hub app available on the App Store, helping parents track their baby\'s growth and milestones.',
+      },
+      {
+        title: 'Growing Portfolio',
+        description:
+          'Plans include launching more innovative products, building a talented team, and expanding our impact in the software industry.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Innovation Lab',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building The Future</h3>
+      <p>Where innovation meets purpose</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Vision Section -->
+  <div class="py-16 px-4 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-6xl">
+    <div class="text-center mb-8">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+        Vision
+      </h2>
+      <p class="max-w-3xl mx-auto text-center text-xl text-gray-600 dark:text-slate-400">
+        Technology should not only solve problems but also bring joy, improve connections, and enrich lives.
+      </p>
+      <p class="max-w-3xl mx-auto text-center text-xl text-gray-600 dark:text-slate-400 mt-4">
+        The Everest Lab embodies this philosophy — a place where innovation and creativity come together to make meaningful products.
+      </p>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <Features2
+    title="Our Products"
+    subtitle="Building solutions that matter"
+    items={[
+      {
+        title: 'Baby Joy',
+        description:
+          'A comprehensive baby tracking and parenting hub app that helps parents monitor their baby\'s growth, milestones, and daily activities.',
+        icon: 'tabler:baby-carriage',
+        callToAction: {
+          text: 'View on App Store',
+          href: 'https://apps.apple.com/sg/app/baby-joy/id6475108933',
+          targetBlank: true,
+        },
+      },
+      {
+        title: 'More Coming Soon',
+        description:
+          'We\'re working on exciting new products that will continue our mission of blending technology with human-centered design.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    title="Let's Build Something Together"
+    subtitle="Whether you're interested in our products, want to collaborate, or just want to connect, I'd love to hear from you."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Visit The Everest Lab',
+        href: 'https://theeverestlab.com',
+        icon: 'tabler:external-link',
+      },
+      {
+        variant: 'secondary',
+        text: 'Try Baby Joy',
+        href: 'https://babyjoy.theeverestlab.com',
+        icon: 'tabler:baby-carriage',
+      },
+    ]}
+  />
+</Layout>

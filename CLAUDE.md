@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### The Everest Lab
 **Website**: theeverestlab.com
 
-The Everest Lab is the parent brand/company that will host multiple products and software services. It serves as an umbrella organization under which various projects and applications will be developed and launched.
+The Everest Lab is the parent brand/company that hosts multiple products and software services. It serves as an umbrella organization under which various projects and applications are developed and launched.
 
 **Key Components**:
 - Portfolio of software products and services
@@ -30,6 +30,9 @@ Baby Joy is the first official product launched under The Everest Lab brand. It 
 ### Project Structure
 - **The Everest Lab** (theeverestlab.com) - Parent brand/company website
 - **Baby Joy** (babyjoy.theeverestlab.com) - First product, subdomain structure
+- **Founder Profile** (founder.theeverestlab.com) - Founder page with aliases:
+  - nguyenthanhtan.theeverestlab.com (redirect to founder page)
+  - tan.theeverestlab.com (optional redirect to founder page)
 - **Future Products** - Will follow similar subdomain pattern (product.theeverestlab.com)
 
 ### Future Plans
@@ -38,6 +41,21 @@ Baby Joy is the first official product launched under The Everest Lab brand. It 
 - Implement Teams section on main site to showcase company structure
 - Add comprehensive Founder Profile section
 - Build a cohesive ecosystem of interconnected products under The Everest Lab brand
+
+### Founder Profile
+**Page Location**: `/src/pages/founder.astro`  
+**URL**: `/founder` (accessible at theeverestlab.com/founder)  
+**Planned Subdomains** (requires DNS/hosting configuration):
+- founder.theeverestlab.com
+- nguyenthanhtan.theeverestlab.com (redirect)
+- tan.theeverestlab.com (optional redirect)
+
+**Content**: Professional profile of Nguyen Thanh Tan, founder of The Everest Lab, highlighting:
+- Over a decade of software development experience
+- Leadership and management background
+- Vision for technology that enriches lives
+- The Everest Lab company overview
+- Baby Joy as the flagship product
 
 ## Technical Documentation
 
