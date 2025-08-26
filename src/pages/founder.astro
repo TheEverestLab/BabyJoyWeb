@@ -3,7 +3,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
 
 const metadata = {
@@ -13,14 +13,26 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <main>
   <!-- Hero Widget with Contact Info -->
-  <Hero
-    tagline="Professional Profile"
-  >
+  <Hero>
     <Fragment slot="title">
-      Tan Nguyen
-      <br />
-      <span class="text-accent dark:text-white highlight text-3xl">iOS Team Lead & Engineering Leader</span>
+      <div class="flex flex-col items-center">
+        <div class="mb-3">
+          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">About Me</p>
+        </div>
+        <img 
+          src="/src/assets/images/profiles/tan-avatar.jpg" 
+          alt="Tan Nguyen" 
+          class="w-40 h-40 rounded-full mb-6 object-cover ring-4 ring-white dark:ring-gray-800 shadow-xl"
+        />
+        <div class="text-center">
+          <h1 class="text-5xl md:text-6xl font-bold mb-3">Tan Nguyen</h1>
+          <p class="text-2xl md:text-3xl text-accent dark:text-white font-semibold tracking-wide">
+            iOS Team Lead & Engineering Leader
+          </p>
+        </div>
+      </div>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -29,18 +41,20 @@ const metadata = {
           iOS Engineer with 12 years of experience and 6 years in leadership, delivering scalable, 
           high-performance apps through modular architecture, multi-hardware integration, and data-driven UI/UX.
         </p>
-        <div class="flex flex-wrap justify-center gap-6 text-lg">
-          <a href="tel:+6583578964" class="flex items-center gap-2 hover:text-accent transition">
-            <Icon name="tabler:phone" class="w-5 h-5" />
-            +65 8357 8964
+        <div class="flex flex-wrap justify-center gap-4 text-base">
+          <a href="tel:+6583578964" class="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-accent transition">
+            <Icon name="tabler:phone" class="w-4 h-4" />
+            <span>+65 8357 8964</span>
           </a>
-          <a href="mailto:ngthanhtan91@gmail.com" class="flex items-center gap-2 hover:text-accent transition">
-            <Icon name="tabler:mail" class="w-5 h-5" />
-            ngthanhtan91@gmail.com
+          <span class="text-gray-400 dark:text-gray-600">•</span>
+          <a href="mailto:ngthanhtan91@gmail.com" class="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-accent transition">
+            <Icon name="tabler:mail" class="w-4 h-4" />
+            <span>ngthanhtan91@gmail.com</span>
           </a>
-          <a href="https://linkedin.com/in/nguyenthanhtan" target="_blank" class="flex items-center gap-2 hover:text-accent transition">
-            <Icon name="tabler:brand-linkedin" class="w-5 h-5" />
-            LinkedIn
+          <span class="text-gray-400 dark:text-gray-600">•</span>
+          <a href="https://linkedin.com/in/nguyenthanhtan" target="_blank" class="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-accent transition">
+            <Icon name="tabler:brand-linkedin" class="w-4 h-4" />
+            <span>LinkedIn</span>
           </a>
         </div>
       </div>
@@ -48,42 +62,26 @@ const metadata = {
   </Hero>
 
   <!-- Professional Summary -->
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Proven Leadership',
-        description:
-          'Managing teams, mentoring engineers, and driving performance improvements with a proven record of scaling modular codebases from 3 to 10 iOS projects over 5 years.',
-      },
-      {
-        title: 'Technical Excellence',
-        description:
-          'Delivered 50% app performance improvements through call reduction, data structure optimization, throttling, and leveraging C for performance-critical operations.',
-      },
-      {
-        title: 'Cross-functional Collaboration',
-        description:
-          'Coordinated with hardware, design, and QA teams to deliver enterprise-grade features with seamless integration.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2020&q=80',
-      alt: 'Tech Innovation',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Professional Summary</h3>
-      <p>Delivering scalable solutions through technical leadership and team development</p>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <div class="pt-0 pb-4 px-4 sm:px-6 mx-auto md:px-24 lg:px-8 max-w-6xl">
+    <h2 class="text-3xl font-bold mb-4 text-center">Professional Summary</h2>
+    <div class="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <div class="text-center p-4">
+        <h3 class="font-semibold text-accent mb-2">Proven Leadership</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">6+ years managing teams, scaling codebases from 3 to 10 iOS projects</p>
+      </div>
+      <div class="text-center p-4">
+        <h3 class="font-semibold text-accent mb-2">Technical Excellence</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">50% performance improvements through optimization & architecture</p>
+      </div>
+      <div class="text-center p-4">
+        <h3 class="font-semibold text-accent mb-2">Cross-functional</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Coordinated with hardware, design, and QA teams</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Professional Experience Section -->
-  <div class="py-16 px-4 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-6xl">
+  <div class="py-6 px-4 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-8 max-w-6xl">
     <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-12 text-center font-heading">
       Professional Experience
     </h2>
@@ -162,8 +160,9 @@ const metadata = {
   <!-- Skills Section -->
   <Features2
     title="Technical Skills & Expertise"
-    subtitle="Building scalable solutions with modern technologies"
+    subtitle=""
     columns={2}
+    classes={{ container: 'py-6 lg:py-8' }}
     items={[
       {
         title: 'Leadership & Management',
@@ -189,7 +188,7 @@ const metadata = {
   />
 
   <!-- Education -->
-  <div class="py-16 px-4 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-6xl">
+  <div class="py-4 px-4 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-6 max-w-6xl">
     <div class="bg-white dark:bg-slate-900 rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold mb-4">Education</h2>
       <div class="flex justify-between items-start">
@@ -202,34 +201,120 @@ const metadata = {
   </div>
 
   <!-- Entrepreneurial Projects Section -->
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'The Everest Lab',
-        description:
-          'Founded as a personal lab/company for incubating software services and apps, serving as a parent brand for multiple innovative products.',
-      },
-      {
-        title: 'Baby Joy - Flagship Product',
-        description:
-          'A comprehensive baby-tracking and parenting hub app available on the App Store, helping parents monitor their baby\'s growth, milestones, and daily activities.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Innovation Lab',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Entrepreneurial Projects</h3>
-      <p>Building the future through innovation</p>
-    </Fragment>
+  <div class="py-6 px-4 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-8 max-w-6xl">
+    <h2 class="text-3xl font-bold mb-8 text-center">Entrepreneurial Projects</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold text-accent mb-3">The Everest Lab</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-3">
+            Founded as a personal lab/company for incubating software services and apps, serving as a parent brand for multiple innovative products.
+          </p>
+          <a href="https://theeverestlab.com" target="_blank" class="text-accent hover:underline transition inline-flex items-center gap-1">
+            Visit The Everest Lab →
+          </a>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-semibold text-accent mb-3">Baby Joy - Flagship Product</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-3">
+            A comprehensive baby-tracking and parenting hub app available on the App Store, helping parents monitor their baby's growth, milestones, and daily activities.
+          </p>
+          <a href="https://apps.apple.com/sg/app/baby-joy/id6475108933" target="_blank" class="text-accent hover:underline transition inline-flex items-center gap-1">
+            Baby Joy on App Store →
+          </a>
+        </div>
+      </div>
+      
+      <!-- Screenshot Carousel -->
+      <div class="relative">
+        <div class="carousel-container overflow-hidden rounded-lg" style="height: 400px;">
+          <div class="carousel-track flex transition-transform duration-500 h-full" id="carouselTrack">
+            <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+              <img src="/src/assets/images/app-store/appstore-0.png" alt="Baby Joy Screenshot 1" class="max-h-full object-contain" />
+            </div>
+            <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+              <img src="/src/assets/images/app-store/appstore-1.PNG" alt="Baby Joy Screenshot 2" class="max-h-full object-contain" />
+            </div>
+            <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+              <img src="/src/assets/images/app-store/appstore-2.PNG" alt="Baby Joy Screenshot 3" class="max-h-full object-contain" />
+            </div>
+            <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+              <img src="/src/assets/images/app-store/appstore-3.PNG" alt="Baby Joy Screenshot 4" class="max-h-full object-contain" />
+            </div>
+            <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+              <img src="/src/assets/images/app-store/appstore-4.PNG" alt="Baby Joy Screenshot 5" class="max-h-full object-contain" />
+            </div>
+            <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+              <img src="/src/assets/images/app-store/appstore-5.PNG" alt="Baby Joy Screenshot 6" class="max-h-full object-contain" />
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carousel Dots -->
+        <div class="flex justify-center mt-4 gap-2" id="carouselDots">
+          <button class="w-2 h-2 rounded-full bg-accent" data-slide="0"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300" data-slide="1"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300" data-slide="2"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300" data-slide="3"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300" data-slide="4"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300" data-slide="5"></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <script>
+    // Carousel functionality
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('#carouselDots button');
+    let currentSlide = 0;
+    const totalSlides = 6;
+
+    function goToSlide(slideIndex) {
+      currentSlide = slideIndex;
+      if (track) {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+      
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add('bg-accent');
+          dot.classList.remove('bg-gray-300');
+        } else {
+          dot.classList.add('bg-gray-300');
+          dot.classList.remove('bg-accent');
+        }
+      });
+    }
+
+    // Auto-play carousel
+    function autoPlay() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      goToSlide(currentSlide);
+    }
+
+    // Set up auto-play interval
+    let autoPlayInterval = setInterval(autoPlay, 3000);
+
+    // Add click handlers to dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        clearInterval(autoPlayInterval);
+        goToSlide(index);
+        autoPlayInterval = setInterval(autoPlay, 3000);
+      });
+    });
+
+    // Pause on hover
+    if (track) {
+      track.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+      track.addEventListener('mouseleave', () => {
+        autoPlayInterval = setInterval(autoPlay, 3000);
+      });
+    }
+  </script>
 
   <!-- Call to Action -->
   <CallToAction
@@ -251,16 +336,5 @@ const metadata = {
       },
     ]}
   />
-
-  <!-- Additional Links -->
-  <div class="text-center pb-12">
-    <div class="flex justify-center gap-6">
-      <a href="https://theeverestlab.com" target="_blank" class="text-gray-600 hover:text-accent transition">
-        Visit The Everest Lab →
-      </a>
-      <a href="https://apps.apple.com/sg/app/baby-joy/id6475108933" target="_blank" class="text-gray-600 hover:text-accent transition">
-        Baby Joy on App Store →
-      </a>
-    </div>
-  </div>
+  </main>
 </Layout>
