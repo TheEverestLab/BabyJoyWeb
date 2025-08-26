@@ -5,6 +5,16 @@ import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+
+// Import images
+import avatarImage from '~/assets/images/profiles/tan-avatar.jpg';
+import screenshot0 from '~/assets/images/app-store/appstore-0.png';
+import screenshot1 from '~/assets/images/app-store/appstore-1.PNG';
+import screenshot2 from '~/assets/images/app-store/appstore-2.PNG';
+import screenshot3 from '~/assets/images/app-store/appstore-3.PNG';
+import screenshot4 from '~/assets/images/app-store/appstore-4.PNG';
+import screenshot5 from '~/assets/images/app-store/appstore-5.PNG';
 
 const metadata = {
   title: 'Tan Nguyen - iOS Team Lead & Founder | The Everest Lab',
@@ -21,10 +31,12 @@ const metadata = {
         <div class="mb-3">
           <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">About Me</p>
         </div>
-        <img 
-          src="/src/assets/images/profiles/tan-avatar.jpg" 
+        <Image 
+          src={avatarImage} 
           alt="Tan Nguyen" 
           class="w-40 h-40 rounded-full mb-6 object-cover ring-4 ring-white dark:ring-gray-800 shadow-xl"
+          width={160}
+          height={160}
         />
         <div class="text-center">
           <h1 class="text-5xl md:text-6xl font-bold mb-3">Tan Nguyen</h1>
@@ -247,22 +259,22 @@ const metadata = {
         <div class="carousel-container overflow-hidden rounded-lg" style="height: 400px;">
           <div class="carousel-track flex transition-transform duration-500 h-full" id="carouselTrack">
             <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-              <img src="/src/assets/images/app-store/appstore-0.png" alt="Baby Joy Screenshot 1" class="max-h-full object-contain" />
+              <Image src={screenshot0} alt="Baby Joy Screenshot 1" class="max-h-full object-contain" />
             </div>
             <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-              <img src="/src/assets/images/app-store/appstore-1.PNG" alt="Baby Joy Screenshot 2" class="max-h-full object-contain" />
+              <Image src={screenshot1} alt="Baby Joy Screenshot 2" class="max-h-full object-contain" />
             </div>
             <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-              <img src="/src/assets/images/app-store/appstore-2.PNG" alt="Baby Joy Screenshot 3" class="max-h-full object-contain" />
+              <Image src={screenshot2} alt="Baby Joy Screenshot 3" class="max-h-full object-contain" />
             </div>
             <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-              <img src="/src/assets/images/app-store/appstore-3.PNG" alt="Baby Joy Screenshot 4" class="max-h-full object-contain" />
+              <Image src={screenshot3} alt="Baby Joy Screenshot 4" class="max-h-full object-contain" />
             </div>
             <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-              <img src="/src/assets/images/app-store/appstore-4.PNG" alt="Baby Joy Screenshot 5" class="max-h-full object-contain" />
+              <Image src={screenshot4} alt="Baby Joy Screenshot 5" class="max-h-full object-contain" />
             </div>
             <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-              <img src="/src/assets/images/app-store/appstore-5.PNG" alt="Baby Joy Screenshot 6" class="max-h-full object-contain" />
+              <Image src={screenshot5} alt="Baby Joy Screenshot 6" class="max-h-full object-contain" />
             </div>
           </div>
         </div>
