@@ -15,6 +15,14 @@ import Brands from '~/components/widgets/Brands.astro';
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 
+// Import Baby Joy screenshots and video
+import heroScreenshot from '~/assets/images/app-store/appstore-0.png';
+import screenshot1 from '~/assets/images/app-store/appstore-1.PNG';
+import screenshot2 from '~/assets/images/app-store/appstore-2.PNG';
+import screenshot3 from '~/assets/images/app-store/appstore-3.PNG';
+import screenshot4 from '~/assets/images/app-store/appstore-4.PNG';
+import screenshot5 from '~/assets/images/app-store/appstore-5.PNG';
+
 const appStoreImg = '~/assets/images/app-store.png';
 const appStoreDownloadLink = 'https://apps.apple.com/sg/app/baby-joy/id6475108933';
 
@@ -22,7 +30,8 @@ const googlePlayImg = '~/assets/images/google-play.png';
 const googlePlayDownloadLink = 'https://apps.apple.com/sg/app/baby-joy/id6475108933';
 
 const metadata = {
-  title: 'Mobile App Homepage',
+  title: 'Baby Joy - Parenting & Baby Tracking App',
+  description: 'Track your baby\'s growth, milestones, and daily activities with Baby Joy - the comprehensive parenting companion app.',
 };
 ---
 
@@ -56,11 +65,7 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Mobile App Web"
-    image={{
-      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
+    tagline="Parenting Made Simple"
   >
     <Fragment slot="title">
       <span class="text-accent dark:text-white highlight">Baby Joy App</span>: <br /> Your ultimate companion <span></span>
@@ -73,6 +78,22 @@ const metadata = {
       Track your baby's growth and milestones effortlessly. Capture every precious moment and cherish each milestone with Baby Joy.
     </Fragment>
     
+    <Fragment slot="image">
+      <div class="relative w-full max-w-3xl mx-auto">
+        <video 
+          class="w-full h-auto" 
+          style="max-height: 600px; object-fit: contain;"
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          poster={heroScreenshot.src}
+        >
+          <source src="/src/assets/images/app-store/BabyJoy_AppPreview.MP4" type="video/mp4" />
+          <img src={heroScreenshot.src} alt="Baby Joy App Preview" class="w-full h-auto" />
+        </video>
+      </div>
+    </Fragment>
 
     <div slot="actions" class="flex max-w-sm gap-4">
       <Button variant="link" href={appStoreDownloadLink}>
@@ -89,36 +110,36 @@ const metadata = {
 
   <Features3
     id="features"
-    title="How to use our app?"
-    subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
-    tagline="Step-by-step guide"
+    title="How to use Baby Joy?"
+    subtitle="Start tracking your baby's journey in just a few simple steps. Baby Joy makes parenting easier with intuitive features designed for busy parents."
+    tagline="Getting Started"
     columns={2}
     items={[
       {
-        title: 'Download and install the app',
-        description: `Begin your journey by downloading our user-friendly app from your device's app store or our official website.`,
+        title: 'Download Baby Joy',
+        description: `Get Baby Joy from the App Store and install it on your iPhone or iPad.`,
         icon: 'tabler:square-number-1',
       },
       {
-        title: 'Sign up',
+        title: 'Create Your Profile',
         description:
-          'Create your account by providing the necessary information, enabling you to access our full range of features.',
+          'Set up your baby\'s profile with their name, birthday, and adorable photo.',
         icon: 'tabler:square-number-2',
       },
       {
-        title: 'Browse templates',
-        description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
+        title: 'Track Daily Activities',
+        description: 'Log feedings, diaper changes, sleep patterns, and more with just a tap.',
         icon: 'tabler:square-number-3',
       },
       {
-        title: 'Preview and select a template',
-        description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
+        title: 'Capture Milestones',
+        description: `Record first words, steps, and precious moments to create lasting memories.`,
         icon: 'tabler:square-number-4',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+      alt: 'Baby with mobile - getting started',
     }}
   />
 
@@ -128,38 +149,117 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'User-friendly interface',
+        title: 'Growth Tracking',
         description:
-          'An intuitive and easy-to-navigate interface that allows users to quickly browse and find the templates they need.',
-        icon: 'tabler:wand',
+          'Monitor your baby\'s height, weight, and head circumference with interactive charts and percentile comparisons.',
+        icon: 'tabler:chart-line',
       },
       {
-        title: 'Personalization options',
+        title: 'Daily Activity Logs',
         description:
-          'Include basic customization tools that let users modify text, colors, images, and other elements within the templates.',
-        icon: 'tabler:settings',
+          'Track feeding times, diaper changes, sleep schedules, and medication with easy-to-use timers and quick entries.',
+        icon: 'tabler:calendar-event',
       },
       {
-        title: 'Ready-to-use components',
+        title: 'Milestone Recording',
         description:
-          'Enhance your designs with ready-to-use elements like graphics, icons, and layouts, saving you time and boosting visual appeal.',
-        icon: 'tabler:template',
+          'Capture first smile, first words, first steps, and other precious moments with photos and notes.',
+        icon: 'tabler:star',
       },
       {
-        title: 'Preview Mode',
-        description: 'Provide a preview of each template, allowing users to see how it looks before making a purchase.',
-        icon: 'tabler:carousel-horizontal',
+        title: 'Health Records',
+        description: 'Keep vaccination schedules, doctor visits, and medical history organized in one secure place.',
+        icon: 'tabler:stethoscope',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
-    }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
     </Fragment>
+    
+    <Fragment slot="image">
+      <div class="relative w-full h-96 overflow-hidden flex items-center">
+        <div class="carousel-track-main flex transition-transform duration-500 h-full w-full" id="mainCarouselTrack">
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+            <img src={heroScreenshot.src} alt="Baby Joy Screenshot 1" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+            <img src={screenshot1.src} alt="Baby Joy Screenshot 2" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+            <img src={screenshot2.src} alt="Baby Joy Screenshot 3" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+            <img src={screenshot3.src} alt="Baby Joy Screenshot 4" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+            <img src={screenshot4.src} alt="Baby Joy Screenshot 5" class="max-h-full object-contain" />
+          </div>
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
+            <img src={screenshot5.src} alt="Baby Joy Screenshot 6" class="max-h-full object-contain" />
+          </div>
+        </div>
+        <!-- Carousel Dots -->
+        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2" id="mainCarouselDots">
+          <button class="w-2 h-2 rounded-full bg-white opacity-75" data-slide="0"></button>
+          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="1"></button>
+          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="2"></button>
+          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="3"></button>
+          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="4"></button>
+          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="5"></button>
+        </div>
+      </div>
+    </Fragment>
   </Content>
+
+  <script>
+    // Main Features Carousel
+    const mainTrack = document.getElementById('mainCarouselTrack');
+    const mainDots = document.querySelectorAll('#mainCarouselDots button');
+    let mainCurrentSlide = 0;
+    const mainTotalSlides = 6;
+
+    function goToMainSlide(slideIndex) {
+      mainCurrentSlide = slideIndex;
+      if (mainTrack) {
+        mainTrack.style.transform = `translateX(-${mainCurrentSlide * 100}%)`;
+      }
+      
+      mainDots.forEach((dot, index) => {
+        if (index === mainCurrentSlide) {
+          dot.style.opacity = '0.75';
+        } else {
+          dot.style.opacity = '0.5';
+        }
+      });
+    }
+
+    // Auto-play carousel
+    function autoPlayMain() {
+      mainCurrentSlide = (mainCurrentSlide + 1) % mainTotalSlides;
+      goToMainSlide(mainCurrentSlide);
+    }
+
+    // Set up auto-play interval
+    let mainAutoPlayInterval = setInterval(autoPlayMain, 3000);
+
+    // Add click handlers to dots
+    mainDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        clearInterval(mainAutoPlayInterval);
+        goToMainSlide(index);
+        mainAutoPlayInterval = setInterval(autoPlayMain, 3000);
+      });
+    });
+
+    // Pause on hover
+    if (mainTrack) {
+      mainTrack.addEventListener('mouseenter', () => clearInterval(mainAutoPlayInterval));
+      mainTrack.addEventListener('mouseleave', () => {
+        mainAutoPlayInterval = setInterval(autoPlayMain, 3000);
+      });
+    }
+  </script>
 
   <!-- Content Widget **************** -->
 
@@ -167,30 +267,30 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Offline Access',
-        description: 'Offer the option for users to download purchased templates for offline use.',
-        icon: 'tabler:wifi-off',
+        title: 'Data Sync & Backup',
+        description: 'Your data is automatically synced and backed up to iCloud, ensuring you never lose precious memories.',
+        icon: 'tabler:cloud-upload',
       },
       {
-        title: 'Secure Cloud Storage',
+        title: 'Multiple Child Profiles',
         description:
-          'Provide cloud storage for purchased templates, ensuring users can access and back up their templates from anywhere securely.',
-        icon: 'tabler:file-download',
+          'Track multiple children in one app with separate profiles for each child.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Regular Updates',
-        description: 'Continuously add new templates and features to keep the app fresh and engaging for users.',
-        icon: 'tabler:refresh',
+        title: 'Export & Share',
+        description: 'Export data as PDF reports to share with pediatricians or family members.',
+        icon: 'tabler:share',
       },
       {
-        title: 'Wishlist',
-        description: `Allow users to create a wishlist of templates they're interested in, making it easier for them to revisit and potentially purchase later.`,
-        icon: 'tabler:heart',
+        title: 'Privacy First',
+        description: `Your family's data is encrypted and secure. We never share or sell your information.`,
+        icon: 'tabler:lock',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Vintage Image',
+      src: 'https://images.unsplash.com/photo-1491013516836-7db643ee125a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+      alt: 'Baby with clouds - secure data',
     }}
   >
     <Fragment slot="content">
