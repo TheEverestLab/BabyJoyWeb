@@ -2,12 +2,15 @@
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Us - The Everest Lab',
+  description: 'A creative technology lab where ideas grow into products, blending engineering excellence with human-centered innovation.',
 };
 ---
 
@@ -15,212 +18,289 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About The Everest Lab"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Baby Joy Image',
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'The Everest Lab Innovation',
     }}
   >
     <Fragment slot="title">
-      Empowering Parents with <br />
-      <span class="text-accent dark:text-white highlight"> Innovative Solutions</span>
+      Where Ideas Grow Into <br />
+      <span class="text-accent dark:text-white highlight">Meaningful Products</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      At Baby Joy, we understand that parenting is a beautiful journey filled with both joys and challenges. 
-      Our mission is to provide you with innovative tools that make this journey smoother, helping you nurture and cherish every moment with your little one.
+      The Everest Lab is a creative technology lab founded with the vision of blending engineering excellence 
+      with human-centered innovation. We create software solutions that improve everyday life while bringing joy and simplicity.
     </Fragment>
   </Hero>
+
+  <!-- Who We Are Section -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Engineering Excellence',
+        description: 'We bring over a decade of software development expertise to every project we undertake.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Human-Centered Design',
+        description: 'Every product starts with empathy for the user, ensuring solutions that truly matter.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Innovation With Purpose',
+        description: 'Technology should improve lives, not just add features. We build with meaning.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Team Innovation',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Who We Are</h3>
+      <p class="text-lg">
+        The Everest Lab is a creative technology lab where ideas grow into products. Founded with the vision 
+        of blending engineering excellence with human-centered innovation, we aim to create software solutions 
+        that improve everyday life.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- What We Do Section -->
+  <Features3
+    title="What We Do"
+    subtitle="We build scalable solutions, experiment with innovative concepts, and incubate ideas that matter."
+    columns={3}
+    items={[
+      {
+        title: 'Build Scalable Products',
+        description: 'Create high-performance software products designed to grow with user needs.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Innovative Experiments',
+        description: 'Explore concepts that merge technology with human experience in meaningful ways.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Incubate Ideas',
+        description: 'Nurture concepts under The Everest Lab brand and launch them as independent solutions.',
+        icon: 'tabler:plant',
+      },
+    ]}
+  />
+
+  <!-- Our First Product: Baby Joy -->
+  <Content
+    items={[
+      {
+        title: 'Comprehensive Tracking',
+        description: 'Monitor growth, milestones, and daily activities with intuitive tools.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Family-Focused',
+        description: 'Designed by parents, for parents, with love and understanding.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Available Now',
+        description: 'Download Baby Joy from the App Store and start your tracking journey.',
+        icon: 'tabler:download',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Baby Joy App',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our First Product: Baby Joy</h3>
+      <p class="text-lg mb-4">
+        Baby Joy is our flagship app - a comprehensive baby-tracking and parenting hub that helps families 
+        track growth, milestones, and daily routines with joy and simplicity.
+      </p>
+      <div class="flex gap-4">
+        <a href="https://babyjoy.theeverestlab.com" target="_blank" class="text-accent hover:underline">
+          Visit Baby Joy →
+        </a>
+        <a href="https://apps.apple.com/sg/app/baby-joy/id6475108933" target="_blank" class="text-accent hover:underline">
+          Download on App Store →
+        </a>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Our Creative Side: Little Prince Leo -->
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Born from Love',
+        description: 'An animated character inspired by my son, created with love and imagination.',
+        icon: 'tabler:sparkles',
+      },
+      {
+        title: 'Storytelling Magic',
+        description: 'Through cartoons, stories, and videos, Leo brings joy and wonder to life.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'Family Inspiration',
+        description: 'A reminder that technology and creativity are powered by human connection.',
+        icon: 'tabler:home-heart',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Little Prince Leo',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Creative Side: Little Prince Leo</h3>
+      <p class="text-lg mb-4">
+        Beyond software, The Everest Lab is also a home for storytelling and creativity. Little Prince Leo 
+        is an animated character inspired by my son, created out of love and imagination. Through cartoons 
+        and stories, Leo represents the joy of childhood and the inspiration behind many of our projects.
+      </p>
+      <p class="text-lg mb-4">
+        This is a reminder that The Everest Lab is not just about technology, but also about family, 
+        creativity, and love.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://www.facebook.com/people/Little-Prince-Leo/61575726356663/" target="_blank" 
+           class="flex items-center gap-2 text-accent hover:underline">
+          <Icon name="tabler:brand-facebook" class="w-5 h-5" />
+          Facebook
+        </a>
+        <a href="https://www.youtube.com/@TheLittlePrinceLeo" target="_blank" 
+           class="flex items-center gap-2 text-accent hover:underline">
+          <Icon name="tabler:brand-youtube" class="w-5 h-5" />
+          YouTube
+        </a>
+        <a href="https://www.tiktok.com/@hoangtuleo" target="_blank" 
+           class="flex items-center gap-2 text-accent hover:underline">
+          <Icon name="tabler:brand-tiktok" class="w-5 h-5" />
+          TikTok
+        </a>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-purple-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Our Journey So Far"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '24' },
-      { title: 'Products', amount: '8' },
-      { title: 'Awards', amount: '6' },
+      { amount: '12+', icon: 'tabler:calendar', title: 'Years Experience' },
+      { amount: '50K+', icon: 'tabler:download', title: 'App Downloads' },
+      { amount: '10+', icon: 'tabler:bulb', title: 'Projects Incubated' },
+      { amount: '∞', icon: 'tabler:heart', title: 'Passion for Innovation' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Our Vision Section -->
+  <div class="py-16 px-4 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-6xl">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+        Our Vision
+      </h2>
+      <p class="max-w-3xl mx-auto text-xl text-gray-600 dark:text-slate-400">
+        Building a future where technology and creativity unite to solve real problems
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="flex justify-center mb-4">
+          <Icon name="tabler:rocket" class="w-12 h-12 text-accent" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Innovation Hub</h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Grow The Everest Lab into a center of innovation and creative excellence.
+        </p>
+      </div>
+      
+      <div class="text-center">
+        <div class="flex justify-center mb-4">
+          <Icon name="tabler:package" class="w-12 h-12 text-accent" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Multiple Products</h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Launch diverse solutions under one brand, each bringing joy and simplicity.
+        </p>
+      </div>
+      
+      <div class="text-center">
+        <div class="flex justify-center mb-4">
+          <Icon name="tabler:users-group" class="w-12 h-12 text-accent" />
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Strong Team</h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Build a team of passionate collaborators who share our vision for meaningful technology.
+        </p>
+      </div>
+    </div>
+  </div>
 
-  <Features3
-    title="What We Offer"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Comprehensive Tracking',
-        description:
-          "Monitor your baby's growth, sleep, feeding, and milestones with ease",
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Health & Wellness',
-        description:
-          'Keep track of vaccinations, medical appointments, and health records.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Parental Support:',
-        description:
-          'Access a wealth of resources, tips, and expert advice to guide you through every stage of your parenting journey.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="At Baby Joy, we leverage cutting-edge technology for innovative solutions and provide reliable tools to support your parenting journey. We foster a strong community and commit to excellence in all our products and services."
-    items={[
-      {
-        title: 'Innovation',
-        description:
-          'Leveraging the latest technology to create smart, user-friendly solutions.',
-      },
-      {
-        title: 'Support',
-        description:
-          'Offering reliable tools that assist you in your parenting journey.',
-      },
-      {
-        title: 'Community',
-        description:
-          'Building a supportive community where parents can share, learn, and grow together.',
-      }
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
+  <!-- Our Values -->
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'Singapore',
-        description: 'The Mayfair, Jurong East Street 32, 600978',
-      },
-      {
-        title: 'Singapore',
-        description: 'ION Orchard, 238801',
-      },
-      {
-        title: 'Vietnam',
-        description: '01 Hung Vuong Street, Danang',
-      },
-      {
-        title: 'Vietnam',
-        description: '01 Vo Nguyen Giap Street, Ho Chi Minh',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Our Values"
+    subtitle="The principles that guide everything we do"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+        title: 'Innovation with Purpose',
+        description: 'Technology should improve lives, not just add features. Every innovation must have a meaningful impact on users.',
+        icon: 'tabler:target',
       },
       {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        title: 'Human-Centered Design',
+        description: 'Every product starts with empathy for the user. We design solutions that understand and address real human needs.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Excellence in Execution',
+        description: 'High performance, scalability, and exceptional user experience are at the core of everything we build.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Creativity & Joy',
+        description: 'Inspired by family, storytelling, and human connection, we infuse creativity and joy into our technology.',
+        icon: 'tabler:sparkles',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    title="Join Our Journey"
+    subtitle="Whether you're a user, collaborator, or fellow innovator, we'd love to connect with you."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Baby Joy',
+        href: 'https://babyjoy.theeverestlab.com',
+        icon: 'tabler:baby-carriage',
+      },
+      {
+        variant: 'secondary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
       },
     ]}
   />
