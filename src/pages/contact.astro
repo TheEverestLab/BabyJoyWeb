@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Header from '~/components/widgets/Header.astro';
 
 const metadata = {
   title: 'Contact',
@@ -10,6 +11,27 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      position="left"
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'About Us', href: '/about' },
+        { text: 'Services', href: '/services' },
+        { text: 'Features', href: '/#features' },
+        { text: 'Founder', href: '/founder' },
+      ]}
+      actions={[
+        {
+          text: 'Download',
+          href: 'https://apps.apple.com/sg/app/baby-joy/id6475108933',
+          target: '_blank',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
   <!-- HeroText Widget ******************* -->
 
   <HeroText tagline="Contact" title="Let's Connect!" />
