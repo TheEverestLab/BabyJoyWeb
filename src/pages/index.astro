@@ -17,12 +17,12 @@ import Image from '~/components/common/Image.astro';
 
 // Import Baby Joy screenshots and video
 import heroScreenshot from '~/assets/images/app-store/appstore-0.png';
-import appPreviewVideo from '~/assets/images/app-store/BabyJoy_AppPreview.MP4';
-import screenshot1 from '~/assets/images/app-store/appstore-1.PNG';
-import screenshot2 from '~/assets/images/app-store/appstore-2.PNG';
-import screenshot3 from '~/assets/images/app-store/appstore-3.PNG';
-import screenshot4 from '~/assets/images/app-store/appstore-4.PNG';
-import screenshot5 from '~/assets/images/app-store/appstore-5.PNG';
+import appPreviewVideo from '~/assets/images/app-store/BabyJoy_AppPreview.MP4?url';
+import screenshot1 from '~/assets/images/app-store/appstore-1.png';
+import screenshot2 from '~/assets/images/app-store/appstore-2.png';
+import screenshot3 from '~/assets/images/app-store/appstore-3.png';
+import screenshot4 from '~/assets/images/app-store/appstore-4.png';
+import screenshot5 from '~/assets/images/app-store/appstore-5.png';
 
 const appStoreImg = '~/assets/images/app-store.png';
 const appStoreDownloadLink = 'https://apps.apple.com/sg/app/baby-joy/id6475108933';
@@ -179,35 +179,35 @@ const metadata = {
     </Fragment>
     
     <Fragment slot="image">
-      <div class="relative w-full h-96 overflow-hidden flex items-center">
+      <div class="relative w-full h-[450px] sm:h-[500px] md:h-[550px] lg:h-[600px] overflow-hidden flex items-center justify-center rounded-lg bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
         <div class="carousel-track-main flex transition-transform duration-500 h-full w-full" id="mainCarouselTrack">
-          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-            <img src={heroScreenshot.src} alt="Baby Joy Screenshot 1" class="max-h-full object-contain" />
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full px-8 sm:px-12 md:px-16">
+            <img src={heroScreenshot.src} alt="Baby Joy Screenshot 1" class="h-[90%] w-auto object-contain drop-shadow-2xl" />
           </div>
-          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-            <img src={screenshot1.src} alt="Baby Joy Screenshot 2" class="max-h-full object-contain" />
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full px-8 sm:px-12 md:px-16">
+            <img src={screenshot1.src} alt="Baby Joy Screenshot 2" class="h-[90%] w-auto object-contain drop-shadow-2xl" />
           </div>
-          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-            <img src={screenshot2.src} alt="Baby Joy Screenshot 3" class="max-h-full object-contain" />
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full px-8 sm:px-12 md:px-16">
+            <img src={screenshot2.src} alt="Baby Joy Screenshot 3" class="h-[90%] w-auto object-contain drop-shadow-2xl" />
           </div>
-          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-            <img src={screenshot3.src} alt="Baby Joy Screenshot 4" class="max-h-full object-contain" />
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full px-8 sm:px-12 md:px-16">
+            <img src={screenshot3.src} alt="Baby Joy Screenshot 4" class="h-[90%] w-auto object-contain drop-shadow-2xl" />
           </div>
-          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-            <img src={screenshot4.src} alt="Baby Joy Screenshot 5" class="max-h-full object-contain" />
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full px-8 sm:px-12 md:px-16">
+            <img src={screenshot4.src} alt="Baby Joy Screenshot 5" class="h-[90%] w-auto object-contain drop-shadow-2xl" />
           </div>
-          <div class="w-full flex-shrink-0 flex items-center justify-center h-full">
-            <img src={screenshot5.src} alt="Baby Joy Screenshot 6" class="max-h-full object-contain" />
+          <div class="w-full flex-shrink-0 flex items-center justify-center h-full px-8 sm:px-12 md:px-16">
+            <img src={screenshot5.src} alt="Baby Joy Screenshot 6" class="h-[90%] w-auto object-contain drop-shadow-2xl" />
           </div>
         </div>
         <!-- Carousel Dots -->
-        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2" id="mainCarouselDots">
-          <button class="w-2 h-2 rounded-full bg-white opacity-75" data-slide="0"></button>
-          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="1"></button>
-          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="2"></button>
-          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="3"></button>
-          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="4"></button>
-          <button class="w-2 h-2 rounded-full bg-white opacity-50" data-slide="5"></button>
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex justify-center items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-3 py-1.5" id="mainCarouselDots">
+          <button class="w-2 h-2 rounded-full bg-white transition-all duration-300" data-slide="0" style="opacity: 0.9"></button>
+          <button class="w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white/70" data-slide="1"></button>
+          <button class="w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white/70" data-slide="2"></button>
+          <button class="w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white/70" data-slide="3"></button>
+          <button class="w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white/70" data-slide="4"></button>
+          <button class="w-2 h-2 rounded-full bg-white/50 transition-all duration-300 hover:bg-white/70" data-slide="5"></button>
         </div>
       </div>
     </Fragment>
@@ -228,9 +228,11 @@ const metadata = {
       
       mainDots.forEach((dot, index) => {
         if (index === mainCurrentSlide) {
-          dot.style.opacity = '0.75';
+          dot.style.opacity = '0.9';
+          dot.style.backgroundColor = 'white';
         } else {
-          dot.style.opacity = '0.5';
+          dot.style.opacity = '1';
+          dot.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
         }
       });
     }
