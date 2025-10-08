@@ -9,6 +9,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import { Icon } from 'astro-icon/components';
 
+// Import custom images
+import littlePrinceLeo from '~/assets/images/projects/LittlePrinceLeo.png';
+import babyJoyGetStarted from '~/assets/images/projects/BabyJoy_GetStarted.png';
+
 const metadata = {
   title: 'About Us - The Everest Lab',
   description: 'A creative technology lab where ideas grow into products, blending engineering excellence with human-centered innovation.',
@@ -140,7 +144,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      src: babyJoyGetStarted,
       alt: 'Baby Joy App',
     }}
   >
@@ -183,7 +187,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      src: littlePrinceLeo,
       alt: 'Little Prince Leo',
     }}
   >
