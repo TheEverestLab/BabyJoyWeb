@@ -17,6 +17,7 @@ import Image from '~/components/common/Image.astro';
 
 // Import Baby Joy screenshots and video
 import heroScreenshot from '~/assets/images/app-store/appstore-0.png';
+import appPreviewVideo from '~/assets/images/app-store/BabyJoy_AppPreview.MP4';
 import screenshot1 from '~/assets/images/app-store/appstore-1.PNG';
 import screenshot2 from '~/assets/images/app-store/appstore-2.PNG';
 import screenshot3 from '~/assets/images/app-store/appstore-3.PNG';
@@ -89,7 +90,7 @@ const metadata = {
           playsinline
           poster={heroScreenshot.src}
         >
-          <source src="/src/assets/images/app-store/BabyJoy_AppPreview.MP4" type="video/mp4" />
+          <source src={appPreviewVideo} type="video/mp4" />
           <img src={heroScreenshot.src} alt="Baby Joy App Preview" class="w-full h-auto" />
         </video>
       </div>
