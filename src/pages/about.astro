@@ -6,6 +6,7 @@ import Content from '~/components/widgets/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
 import { Icon } from 'astro-icon/components';
 
 const metadata = {
@@ -15,6 +16,27 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      position="left"
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'Services', href: '/services' },
+        { text: 'Features', href: '/#features' },
+        { text: 'Founder', href: '/founder' },
+        { text: 'Contact', href: '/contact' },
+      ]}
+      actions={[
+        {
+          text: 'Download',
+          href: 'https://apps.apple.com/sg/app/baby-joy/id6475108933',
+          target: '_blank',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
   <!-- Hero Widget ******************* -->
 
   <Hero
